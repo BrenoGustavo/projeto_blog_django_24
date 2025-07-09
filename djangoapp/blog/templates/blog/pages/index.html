@@ -5,14 +5,11 @@
     <div class="section-content-wide">
       <div class="section-gap">
 
-        {% comment %} <div class="card-grid">
-          {% for post in page_obj %}
-            {% include 'blog/partials/_post-card.html' with i=forloop.counter0 %}
-          {% endfor %}
-        </div> {% endcomment %}
-        {% if page_obj %}
+        {% comment %} {% if page_obj %} {% endcomment %}
+        {% if posts %}
           <div class="card-grid">
-            {% for post in page_obj %}
+            {% comment %} {% for post in page_obj %} {% endcomment %}
+            {% for post in posts %}
               {% include 'blog/partials/_post-card.html' with i=forloop.counter0 %}
             {% endfor %}
           </div>
